@@ -1,0 +1,111 @@
+% Copyright (c) 2026 Marcelo Fort Muñoz
+%
+% Este traballo pode ser distribuído e/ou modificado baixo as
+% condicións da LaTeX Project Public License, xa sexa a versión 1.3c
+% desta licenza ou (á túa escolla) calquera versión posterior.
+% A última versión desta licenza atópase en:
+% http://www.latex-project.org/lppl.txt
+% SPDX-License-Identifier: AGPL-3.0-or-later
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[spanish]{babel}
+\usepackage{csquotes}
+\usepackage{fontspec}
+\usepackage{geometry}
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{xcolor}
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} % Enables the custom headers and footers
+
+\usepackage{caption}
+\usepackage[backend=biber, style=apa]{biblatex}
+
+\fancyfoot[C]{Departamento de ingeniería informática - Memoria prácticas en empresa}              % Center
+\fancyfoot[R]{\thepage}
+
+\renewcommand{\headrulewidth}{0pt}
+
+\addbibresource{biblio/ejemplo.bib}
+
+
+\renewcommand{\baselinestretch}{1.5}
+
+\setmainfont{Liberation Sans}
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+    \begin{titlepage}
+
+% --- IMAXE DE FONDO / DEREITA ---
+         \AddToShipoutPictureBG*{
+            \AtPageLowerLeft{
+                \put(140, 170){%
+                    % 15.5cm obriga á imaxe a saír por fóra do folio
+                \includegraphics[width=14cm, keepaspectratio, trim=0 0 1 0, clip]{recursos/nebrija_2}
+                }
+            }
+        }
+
+% --- IMAXE DE ABAIXO DEREITA ---
+        \AddToShipoutPictureBG*{
+            \AtPageLowerLeft{
+                \put(335, 35){
+                    \includegraphics[width=9cm,keepaspectratio]{recursos/nebrija_pie}
+                }
+            }
+        }
+
+% --- BLOQUE SUPERIOR ESQUERDO (Escola e datos) ---
+        \noindent
+        \begin{minipage}[t]{0.75\textwidth}
+            \vspace{0.5cm}
+            {\Large \textcolor{gray}{\textbf{Escuela Politécnica Superior}}} \\[0.8cm]
+            {\small \textbf{Nombre del alumno:} Marcelo Fort Muñoz \{\}@alumnos.nebrija.es\\}
+            {\small \textbf{Nombre/s de los tutores profesional y académico:} [Nomes dos tutores] \\}
+            {\small \textbf{Tipología de memoria:} [Investigación/Desarrollo]}
+        \end{minipage}
+
+        \vspace{7.0cm}
+
+% --- BLOQUE CENTRAL ESQUERDO
+        \bgroup
+        \setlength{\fboxsep}{0pt}
+        \noindent\hspace*{-3.2cm}
+        \colorbox{red}{%
+        % A4=21cm de ancho. 21/2 (a mitade) = 10.5cm.
+            \begin{minipage}[c][7.86cm][c]{11.11cm}
+                \centering
+                \begin{minipage}{8.5cm}
+                    \centering
+                    {\Huge \textcolor{white}{\textbf{Título del trabajo que se presenta}}}
+                \end{minipage}
+            \end{minipage}%
+        }
+        \egroup
+
+        \vspace{2.5cm}
+
+% --- BLOQUE INFERIOR ESQUERDO (Asinatura e Grao) ---
+        \noindent\hspace{-0.75cm}
+        \begin{minipage}[t]{\textwidth}
+            \flushleft
+            {\Large \textcolor{red}{\textbf{Evaluación de Capacidades \\ en la Empresa I}}} \\[0.3cm]
+            {\textbf{Grado en Ingeniería Informática}}
+        \end{minipage}
+
+    \end{titlepage}
+
+    D. /Dña. autoriza a que el presente trabajo se guarde y custodie en los repositorios de la Universidad Nebrija y además SI/NO autoriza a su disposición en abierto.
+    \pagebreak
+
+    Ejemplo de una cita \cite{einstein}
+
+    \printbibliography
+
+\end{document}
