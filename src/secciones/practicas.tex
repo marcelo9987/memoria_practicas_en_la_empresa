@@ -20,7 +20,7 @@
 En esta sección se presentan los detalles de tanto la experiencia profesional en las prácticas,
 los antecedentes personales y académicos, así como la descripción de la empresa y su funcionamiento.
 
-\subsection{Antecedentes}\label{subsec:antecedentes}
+\subsection{Antecedentes}\label{subsec:practicas-antecedentes}
 Al comienzo de las prácticas contaba con 180 de 240 ECTS aprobados.
 De los 60 restantes, 48 son de asignaturas de prácticas y 12 del trabajo de fin de grado.
 Tanto yo como los compañeros de mi promoción con los que tengo contacto, empezamos a buscar prácticas a mediados del curso 24--25
@@ -38,17 +38,22 @@ Para la realización de las prácticas, realicé varias entrevistas con diferent
     \item \textbf{Entrevista con Sener:} Tuve una conferencia telefónica con un representante de la empresa a finales de abril de 2026.
     Se me solicitó documentación y, en los días posteriores, antes de que coordinásemos una entrevista, la empresa encontró un candidato
     que se ajustaba al perfil que buscaban y me comunicaron que daban por terminado el proceso de selección.
-    \item \textbf{Entrevista con Free Software Foundation Europe:} La entrevista fue realizada de manera remota a través de una videollamada a mediados de Junio de 2026.
+    \item \textbf{Entrevista con Free Software Foundation Europe:} La entrevista fue realizada de manera remota a través de una videollamada a mediados de junio de 2026.
     Resultó ser una entrevista muy amena y agradable, en la que se me hicieron preguntas técnicas, personales y de motivación.
     A los pocos días, me ofrecieron un puesto de prácticas en la fundación, el cual acepté.
     \item \textbf{Entrevista con FINSA:} La entrevista fue realizada de manera remota a través de una videollamada a finales de agosto de 2026.
     A pesar de que me ofrecieron un puesto de prácticas en la empresa y me interesaba mucho, decidí optar por el CESGA, ya que me ofrecía la posibilidad de realizar el TFG en la misma línea de investigación que las prácticas.
     \item \textbf{Entrevista con CESGA:} No hubo una entrevista formal, ya que me ofrecieron el puesto tras una correspondencia por correo electrónico.
-    Voz a tener una entrevista informal con un coordinador del centro para conocerme y hablar sobre las posibles líneas de investigación para el TFG.
+    Voz a tener una entrevista informal con un coordinador del centro para conocerme y hablar sobre las posibles líneas de investigación para el TFG .
 \end{itemize}
 
 \subsubsection{Información previa}\label{subsubsec:informacion-previa}
-%todo
+Previamente a la realización de las prácticas, realizé Sistemas Operativos I, en el que practicamos con BASH,
+Redes, en el que aprendimos sobre protocolos de red y varias asignaturas de programación, en las que aprendí a programar en C y Python.
+
+A diario uso Linux y tengo un servidor casero, por lo que no tuve problemas en adaptarme a la infraestructura de la fundación, que está basada en Linux y software libre.
+
+A nivel personal, me considero una persona curiosa y con ganas de aprender, lo que me ha llevado a interesarme por el software libre y la seguridad informática.
 
 \subsubsection{Motivos de la elección de prácticas}\label{subsubsec:motivos-eleccion}
 %todo
@@ -56,7 +61,7 @@ Para la realización de las prácticas, realicé varias entrevistas con diferent
 \subsubsection{Datos de la empresa}\label{subsubsec:datos-empresa}
 Nombre de la empresa: Free Software Foundation Europe (FSFE)\\
 Sector: Organización sin ánimo de lucro\\
-Estructura del departamento \autocite{wwwFSFE-team}: En el departamento estamos mi tutor y yo.
+Estructura del departamento\autocite{wwwFSFE-team}: En el departamento estamos mi tutor y yo.
 A mayores, también participan sobre 10 voluntarios de la comunidad, que ayudan a mantener la infraestructura y a desarrollar herramientas.\\
 Organigrama: Actualmente, la fundación tiene como presidente a Matthias Kirschner.
 Después, hay un consejo ejecutivo formado por varios miembros, que redactan los presupuestos y llevan la implementación de los planes estratégicos.
@@ -76,7 +81,41 @@ Tras esta configuración, generé mis claves SSH y GPG, instalé ciertas herrami
 
 
 \subsection{Funciones y tareas en las prácticas}\label{subsec:funciones-tareas}
-%todo
+Durante las prácticas, he trabajado en el mantenimiento de la infraestructura de la fundación y en el desarrollo de herramientas para la comunidad de software libre.
+En cuanto al mantenimiento de la infraestructura, he ayudado a optimizar la configuración del software Anubis y fail2ban,
+que son utilizados para proteger los servidores de la fundación contra ataques de fuerza bruta, bots maliciosos y lecturas masivas por LLMs.
+La configuración consistió en añadir reglas a \textquote{fail2ban} y añadir la funcionalidad de banear grupos de IPs.
+Con Anubis, optimizé la configuración de los filtros y configuré un \textquote{honeypot} para detectar a bots maliciosos y evitar que accedan a los servidores de la fundación.
+%todo evidencia?
+
+Por otro lado, he actualizado servicios y arreglado cambios críticos generados por la migración de versiones de software y la actualización de dependencias.
+%todo evidencia?
+
+He migrado la base de datos de la fundación de la antigua API de solicitud de IVA alemana a la nueva API REST, que es más eficiente y segura.
+Para esto, he aprendido flask y, tras entender la API, implementé los cambios y me aseguré de mantener la cobertura de pruebas.
+%todo evidencia?
+
+He desplegado un nuevo servicio de gestión de podcasts, configurando el servidor y el software necesario para su correcto funcionamiento.
+También tuve que configurar el software de monitorización para que vigilase el estado del servicio.
+%todo evidencia?
+
+He realizado cambios en la lógica PHP de la web de la fundación, para alterar formularios, añadir filtros y expandir funcionalidades.
+%todo evidencia?
+
+Durante las prácticas, tuvimos que enfrentar los CVE-2026-109618 y CVE-2026-109619, que afectaban a la infraestructura de la fundación.
+Esto requirió una rápida respuesta para bloquear los ataques y mitigar los riesgos.
+Al día siguiente, actualizamos todos los servicios.
+%todo evidencia?
+
+He ido haciendo cambios a la página web y distintas traducciones de la fundación, para mejorar la experiencia de usuario y la accesibilidad.
+%todo evidencia?
+
+Tras la configuración de un nuevo sistema de \textquote{webmail}, redacté la documentación para su uso y configuración, para que los voluntarios y empleados puedan utilizarlo sin problemas.
+%todo evidencia?
+
+Estoy desarrollando una herramienta de estadísticas estáticas de la página web de la fundación,
+esta herramienta permite ver los eventos y noticias agregados, por etiquetas, mes, año, ciudad y país, y permite filtrar por estos parámetros.
+%todo evidencia?
 
 \subsection{Herramientas utilizadas en las prácticas}\label{subsec:herramientas}
 %todo
