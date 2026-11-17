@@ -1,0 +1,67 @@
+Semántica no reflejada:
+\begin{enumerate}
+    \item \textbf{Cuando se genera un movimiento de venta con evento, el evento se guardará exclusivamente en la tabla de ventas, y no en la tabla de eventos.}
+    \item Cantidad de movimiento no puede ser negativa ni superior a la cantidad de stock modificado.
+\end{enumerate}
+
+\begin{lstlisting}[caption={Modelo Relacional - Papertory}, label={fig:modelo-relacional-papertory}]
+
+    USUARIO (id_usuario, nombre, email, password, Rol)
+        CP: id_usuario
+
+    PROVEEDOR (id_proveedor, nombre, email, vatId, telefono, direccion, ciudad, pais)
+        CP: id_proveedor
+
+    LOCALIZACION (id_localizacion, nombre)
+        CP: id_localizacion
+
+    PRODUCTO (id_producto, nombre, descripcion, codigo, activo, tipo)
+        CP: id_producto
+
+    MATERIALPROMOCIONAL (id_producto, tipo, ancho, alto, descripcion)
+        CP: id_producto
+        CE: id_producto REFERENCIA PRODUCTO(id_producto)
+
+    MERCHANDISING (id_producto, talla, precio, iva, descripcion)
+        CP: id_producto
+        CE: id_producto REFERENCIA PRODUCTO(id_producto)
+
+    EXISTENCIA (id_existencia, id_producto, id_localizacion, id_proveedor, fecha_entrada, fecha_apertura, cantidad_inicial, cantidad_actual)
+        CP: id_existencia
+        CE: id_producto REFERENCIA PRODUCTO(id_producto)
+        CE: id_localizacion REFERENCIA LOCALIZACION(id_localizacion)
+        CE: id_proveedor REFERENCIA PROVEEDOR(id_proveedor)
+
+    EVENTO (id_evento, nombre, descripcion)
+        CP: id_evento
+
+    MOVIMIENTO (id_movimiento, id_existencia, id_evento, id_usuario, fecha, cantidad, tipo)
+        CP: id_movimiento
+        CE: id_existencia REFERENCIA EXISTENCIA(id_existencia)
+        CE: id_evento REFERENCIA EVENTO(id_evento)
+        CE: id_usuario REFERENCIA USUARIO(id_usuario)
+
+    VENTA (id_venta, id_evento, id_usuario, fecha, metodo)
+        CP: id_venta
+        CE: id_evento REFERENCIA EVENTO(id_evento)
+        CE: id_usuario REFERENCIA USUARIO(id_usuario)
+
+    LINEA (id_linea, id_venta, id_movimiento, iva, precio_unitario, cantidad)
+        CP: id_linea, id_venta
+        CE: id_venta REFERENCIA VENTA(id_venta)
+        CE: id_movimiento REFERENCIA MOVIMIENTO(id_movimiento)
+
+
+
+    
+\end{lstlisting}
+
+\begin{longtable}[c]{|c|c|c|c|c|c|c|c|}
+    \hline
+    \multicolumn{8}{| c |}{Begin of Table} \\
+    \hline
+    Entidad o relación & Atributos & Descripción & Tipo de datos & N & M & D & P \\
+    \hline
+    \caption{This is the caption for the test table.}
+\end{longtable}\label{tab:diccionario-datos}
+

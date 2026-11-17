@@ -25,6 +25,9 @@
 \usepackage{graphicx}
 \usepackage{eso-pic}
 \usepackage{microtype}
+\usepackage{longtable}
+
+
 \usepackage[svgnames]{xcolor}
 \usepackage[colorlinks=true, linkcolor=Indigo, urlcolor=Indigo]{hyperref}
 
@@ -35,6 +38,40 @@
 \usepackage{caption}
 \usepackage[backend=biber, style=apa]{biblatex}
 %\DeclareLanguageMapping{spanish}{spanish-apa}
+
+
+\usepackage{listings}
+
+% Definición de estilo para Modelo Relacional
+\lstdefinelanguage{ModeloRelacional}{
+    keywords=[1]{CE, REFERENCIA},
+    keywordstyle=[1]\color{blue}\bfseries,
+    keywords=[2]{CP},
+    keywords=[3]{PROVEEDOR, EXISTENCIA, LOCALIZACION, PRODUCTO, MATERIALPROMOCIONAL, MERCHANDISING, MOVIMIENTO, LINEA, VENTA, USUARIO, EVENTO},
+    keywordstyle=[2]\color{red}\bfseries,
+    sensitive=true,
+    comment=[l]{\#},
+    commentstyle=\color{gray}\itshape,
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    breakatwhitespace=true,
+    showstringspaces=false,
+    tabsize=2,
+    frame=single,
+    framesep=5pt,
+    rulecolor=\color{black!30},
+    backgroundcolor=\color{gray!5}
+%    morekeywords={\textcolor{red}{\textbf{[A-Z]+}}}
+}
+
+\lstset{
+    language=ModeloRelacional,
+    inputencoding=utf8,
+    extendedchars=true,
+    literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+        {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+        {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {→}{{$\rightarrow$}}1
+}
 
 \fancyfoot[C]{Departamento de ingeniería informática - Memoria prácticas en empresa}              % Center
 \fancyfoot[R]{\thepage}
@@ -140,12 +177,19 @@
     \input{secciones/desarrollo}
 
     \section{Marco teórico}\label{sec:marco-teorico}
+
     \section{Metodología}\label{sec:metodologia}
+
     \section{Proyecto}\label{sec:proyecto}
     \input{secciones/proyecto}
+
     \section{Resultados y discusión}\label{sec:resultados-discusion}
+    \input{secciones/resultados-discusion}
+
     \section{Conclusiones}\label{sec:conclusiones}
+
     \section{Líneas futuras}\label{sec:lineas-futuras}
+
     \section{Uso de IA}\label{sec:uso-ia}
 
 

@@ -13,7 +13,7 @@
 %
 % The Current Maintainer of this work is Marcelo Fort Muñoz.
 % This work consists of the files main.tex, secciones/practicas.tex, secciones/resumen.tex,
-% biblio/ejemplo.bib, and any other files in the same directory (src/ and subfolders with the exception of png files).
+% biblio/ejemplo.bib, and any other files in the same directory (src/ and subfolders with the exception of nebrija*.png files where * is any character before the extension eg. nebrija_pie.png).
 % SPDX-License-Identifier: LPPL-1.3c
 
 
@@ -77,6 +77,7 @@ los antecedentes personales y académicos, así como la descripción de la empre
     Las diferentes áreas tienen un coordinador, que es el encargado de supervisar y coordinar las tareas de los empleados y voluntarios.\\
     Finalmente, están los voluntarios, que son los encargados de ayudar a mantener la infraestructura y a desarrollar herramientas para la comunidad de software libre.\\
 
+
 \subsection{Objetivos de las prácticas}\label{subsec:objetivos-practicas}
 %todo
 
@@ -85,24 +86,34 @@ los antecedentes personales y académicos, así como la descripción de la empre
     Tuve que instalarle Debian, configurarlo y, después, correr una libreta ansible para instalar herramientas comunes de desarrollo.
     Tras esta configuración, generé mis claves SSH y GPG, instalé ciertas herramientas de desarrollo y ya empecé a trabajar en las tareas asignadas.
 
+
 \subsection{Funciones y tareas en las prácticas}\label{subsec:funciones-tareas}
     Durante las prácticas, he trabajado en el mantenimiento de la infraestructura de la fundación y en el desarrollo de herramientas para la comunidad de software libre.
-    En cuanto al mantenimiento de la infraestructura, he ayudado a optimizar la configuración del software Anubis y fail2ban,
-    que son utilizados para proteger los servidores de la fundación contra ataques de fuerza bruta, bots maliciosos y lecturas masivas por LLMs.
-    La configuración consistió en añadir reglas a \textquote{fail2ban} y añadir la funcionalidad de banear grupos de IPs.
+En cuanto al mantenimiento de la infraestructura, he ayudado a optimizar la configuración del software Anubis y \textquote{fail2ban},
+que son utilizados para proteger los servidores de la fundación contra ataques de fuerza bruta, bots maliciosos y lecturas masivas por LLM\@.
+La configuración consistió en añadir reglas a \textquote{fail2ban} y añadir la funcionalidad de banear bloques de IP\@.
     Con Anubis, optimizé la configuración de los filtros y configuré un \textquote{honeypot} para detectar a bots maliciosos y evitar que accedan a los servidores de la fundación.
-    %todo evidencia?
+Se puede ver un resumen de los bloqueos realizados por \textquote{fail2ban} en la \autoref{fig:bans_summary}.
+\begin{figure}[hb]
+    \centering
+    \includegraphics[width=500px]{recursos/bans_summary}
+    \caption{Estadísticas de fail2ban}
+    \label{fig:bans_summary}
+\end{figure}
 
     Por otro lado, he actualizado servicios y arreglado cambios críticos generados por la migración de versiones de software y la actualización de dependencias.
     %todo evidencia?
 
-    He migrado la base de datos de la fundación de la antigua API de solicitud de IVA alemana a la nueva API REST, que es más eficiente y segura.
+He migrado la base de datos de la fundación de la antigua API \enquote{XMLRPC} de solicitud de IVA alemana a la nueva API \enquote{REST}, que es más eficiente y segura.
     Para esto, he aprendido flask y, tras entender la API, implementé los cambios y me aseguré de mantener la cobertura de pruebas.
-    %todo evidencia?
+\href{https://git.fsfe.org/fsfe-system-hackers/registration/pulls/11}{Enlace a la PR}.
 
     He desplegado un nuevo servicio de gestión de podcasts, configurando el servidor y el software necesario para su correcto funcionamiento.
-    También tuve que configurar el software de monitorización para que vigilase el estado del servicio.
-    %todo evidencia?
+También tuve que configurar el software de monitorización para que vigilase el estado del servicio,
+además de cambiar el generado de .rss para que generase el feed de los podcast de forma que el programa pudiese importarlo.
+\href{https://git.fsfe.org/fsfe-system-hackers/castopod}{Castopod},
+\href{https://git.fsfe.org/fsfe-system-hackers/monitoring/commit/b4725cb659dba50c930aa2ff37e6c4ba638594b7}{monitorización}.
+y \href{https://git.fsfe.org/FSFE/fsfe-website/pulls/6189}{PR en el que se cambió el generador de .rss}.
 
     He realizado cambios en la lógica PHP de la web de la fundación, para alterar formularios, añadir filtros y expandir funcionalidades.
     %todo evidencia?
