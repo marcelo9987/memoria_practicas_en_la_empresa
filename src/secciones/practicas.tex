@@ -1,6 +1,20 @@
 %% practicas.tex
 %% Copyright 2026 Marcelo Fort Muñoz
 %
+% This work is provided without any warranty, express or implied.
+% The author makes no representations regarding its accuracy,
+% reliability, safety, or suitability for any particular purpose.
+%
+% This work is not intended, designed, tested, or certified for use
+% in safety-critical applications or in any situation where its
+% failure could result in property damage, personal injury, or loss
+% of life. It must not be relied upon in such circumstances.
+%
+% Anyone choosing to use this work in such circumstances assumes
+% responsibility for independently assessing its suitability and
+% for any necessary verification and safeguards, to the extent
+% permitted by applicable law.
+%
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either version 1.3
 % of this license or (at your option) any later version.
@@ -12,9 +26,17 @@
 % This work has the LPPL maintenance status `maintained'.
 %
 % The Current Maintainer of this work is Marcelo Fort Muñoz.
-% This work consists of the files main.tex, secciones/practicas.tex, secciones/resumen.tex,
-% biblio/ejemplo.bib, and any other files in the same directory (src/ and subfolders with the exception of nebrija*.png files where * is any character before the extension eg. nebrija_pie.png).
+% Reachable at: marcelo.fm@member.fsf.org
+%
+% Please report any issues to the maintainer.
+%
+% The files covered by this license are listed in
+% "manifest.txt" in the root of this distribution.
+% Files not listed therein are not included in this work.
+% Their respective copyright and licensing terms remain applicable.
+%
 % SPDX-License-Identifier: LPPL-1.3c
+%%
 
 
 En esta sección se presentan los detalles de tanto la experiencia profesional en las prácticas,
@@ -47,7 +69,7 @@ los antecedentes personales y académicos, así como la descripción de la empre
         Voz a tener una entrevista informal con un coordinador del centro para conocerme y hablar sobre las posibles líneas de investigación para el TFG .
     \end{itemize}
 
-\subsubsection{Información previa}\label{subsubsec:informacion-previa}
+\subsubsection{Información previa.}\label{subsubsec:informacion-previa}
     Previamente a la realización de las prácticas, realizé Sistemas Operativos I, en el que practicamos con BASH,
     Redes, en el que aprendimos sobre protocolos de red y varias asignaturas de programación, en las que aprendí a programar en C y Python.
 
@@ -55,19 +77,19 @@ los antecedentes personales y académicos, así como la descripción de la empre
 
     A nivel personal, me considero una persona curiosa y con ganas de aprender, lo que me ha llevado a interesarme por el software libre y la seguridad informática.
 
-\subsubsection{Motivos de la elección de prácticas}\label{subsubsec:motivos-eleccion}
+\subsubsection{Motivos de la elección de prácticas.}\label{subsubsec:motivos-eleccion}
     Durante el desarrollo de la carrera, es inevitable usar software como GCC, Git o Linux.
     Esto te introduce involuntariamente al proyecto GNU y al mundo del software libre y abierto.
-    En los primeros años, es fácil usar sin darse cuenta de lo que significa, pero según usas herramientas más avanzadas, uno ve como podría ser un mundo sin software libre;
-    al ver los infiernos de dependencias, fallos de seguridad y herramientas privativas incompletas sin alternativas por monopolio de mercado, uno puede darse cuenta de lo que importante que es
+    En los primeros años, es fácil usar las herramientas de forma mecánica sin darse cuenta de lo que significa, pero según usas herramientas más avanzadas, uno ve como podría ser un mundo sin software libre;
+    al ver la proliferación del software como servicio, la progresiva desposesión de los usuarios, los infiernos de dependencias, fallos de seguridad y herramientas privativas incompletas sin alternativas por monopolio de mercado, uno puede darse cuenta de lo que importante que es
     el proyecto GNU y el software libre.
-    Por esto y mi admiración a oganizaciones como GNU, mozilla o Apache y a figuras como Stallman, Torvalds o Knuth, me hice miembro de la FSF\@.
+    Por esto y mi admiración a organizaciones como GNU, SFC, mozilla o Apache y a figuras como Stallman, Torvalds o Knuth, me hice miembro de la FSF\@.
     El verano del último año, me llegó un correo de la FSF en la que buscaban aprendices y pensé que no perdía nada en mandar un correo electrónico a la homóloga fundación europea,
     la FSFE y, para mi sorpresa, me respondieron y me ofrecieron un puesto de prácticas en la fundación tras una entrevista.
 
-\subsubsection{Datos de la empresa}\label{subsubsec:datos-empresa}
+\subsubsection{Datos de la empresa.}\label{subsubsec:datos-empresa}
     Nombre de la empresa: Free Software Foundation Europe (FSFE)\\
-    Sector: Organización sin ánimo de lucro, tecnológica, social, lobby social\\
+    Sector: Organización sin ánimo de lucro, tecnológica, social, lobby social y tecnológico\\
     Estructura del departamento\autocite{wwwFSFE-team}: En el departamento estamos mi tutor y yo.
     A mayores, también participan sobre 10 voluntarios de la comunidad, que ayudan a mantener la infraestructura y a desarrollar herramientas.\\
     Organigrama: Actualmente, la fundación tiene como presidente a Matthias Kirschner.
@@ -78,8 +100,31 @@ los antecedentes personales y académicos, así como la descripción de la empre
     Finalmente, están los voluntarios, que son los encargados de ayudar a mantener la infraestructura y a desarrollar herramientas para la comunidad de software libre.\\
 
 
-\subsection{Objetivos de las prácticas}\label{subsec:objetivos-practicas}
-%todo
+\subsection{Objetivos de las prácticas.}\label{subsec:objetivos-practicas}
+    Las prácticas tienen como objetivo principal el aprendizaje y la adquisición de experiencia profesional en el ámbito del software libre y abierto.
+    Inicialmente, se me asignaron las siguientes tareas:
+    \begin{itemize}
+        \item Preparar mi ThinkPad para el trabajo, instalando Debian y configurando las herramientas necesarias (hecho).
+        \item Actualizar la documentación de onboarding según fuera encontrando cosas que no estuviesen documentadas o fuesen ambiguas (hecho).
+        \item Añadirme en la página web de la fundación como empleado (hecho) \autocite{wwwFSFE-team}.
+        \item Actualizar el sistema de gestión de eventos y pagos de eventos de la API XMLRPC antigüa a la nueva API REST del gobierno alemán(hecho).
+        \item Actualizar la versión de python del sistema de distribución de claves SSH (hecho).
+        \item Desplegar un nuevo servicio de gestión de podcasts, configurando el servidor y el software necesario para su correcto funcionamiento (hecho).
+        \item Configurar el software de monitorización para que vigilase el estado del servicio de gestión de podcasts (hecho).
+        \item Optimizar la configuración de Anubis y Fail2Ban para proteger los servidores de la fundación contra ataques de fuerza bruta, bots maliciosos y lecturas masivas por LLM\@ (hecho).
+        \item Configurar un honeypot para detectar a bots maliciosos y evitar que sobrecarguen los servidores de la fundación (hecho).
+        \item Configurar plugins de fail2ban para poder banear bloques de IP\@ (hecho).
+        \item Investigar la posibilidad de usar reaction en lugar de fail2ban para proteger los servidores de la fundación (hecho).
+    \end{itemize}
+A posteriori, se me asignaron otras tareas, como, pero no reduciendo a, las siguientes:
+    \begin{itemize}
+        \item Actualizar el formulario de puesto de conferencia, coordinando con la responsable de los eventos, el responsable de la web y programando los cambios necesarios en la web y en la API integrando los deseos de todas las partes (hecho).
+        \item Crear una herramienta de análisis estático de la web de la fundación que analizase los eventos y noticias en base a sus traducciones (hecho).
+        \item Ampliar usando metodología de programación extrema la herramienta de análisis estático de la web de la fundación para que analizase los eventos y noticias en base a sus etiquetas, mes, año, ciudad y país (en progreso).
+        \item Crear una libreta ansible para poder monitorizar el estado de los portátiles de los empleados y voluntarios de la fundación (en progreso).
+        \item Migrar OpenLDAP a un nuevo proveedor de contenedores (backlog).
+
+    \end{itemize}
 
 \subsection{Onboarding}\label{subsec:onboarding}
     Al llegar, se me asigno un ordenador portátil en blanco.
@@ -94,7 +139,7 @@ que son utilizados para proteger los servidores de la fundación contra ataques 
 La configuración consistió en añadir reglas a \textquote{fail2ban} y añadir la funcionalidad de banear bloques de IP\@.
     Con Anubis, optimizé la configuración de los filtros y configuré un \textquote{honeypot} para detectar a bots maliciosos y evitar que accedan a los servidores de la fundación.
 Se puede ver un resumen de los bloqueos realizados por \textquote{fail2ban} en la \autoref{fig:bans_summary}.
-\begin{figure}[hb]
+\begin{figure}[h]
     \centering
     \includegraphics[width=500px]{recursos/bans_summary}
     \caption{Estadísticas de fail2ban}
@@ -102,7 +147,8 @@ Se puede ver un resumen de los bloqueos realizados por \textquote{fail2ban} en l
 \end{figure}
 
     Por otro lado, he actualizado servicios y arreglado cambios críticos generados por la migración de versiones de software y la actualización de dependencias.
-    %todo evidencia?
+    Tuve que lidiar con cambios en la forma de funcionar de SQLAlchemy y Flask, que afectaban a la forma en la que se hacían las consultas a la base de datos y los tipos de consulta.
+    \href{https://git.fsfe.org/fsfe-system-hackers/ssh-key-distributor/pulls/45}{Enlace a la PR de actualización de la versión de python del sistema de distribución de claves SSH}.
 
 He migrado la base de datos de la fundación de la antigua API \enquote{XMLRPC} de solicitud de IVA alemana a la nueva API \enquote{REST}, que es más eficiente y segura.
     Para esto, he aprendido flask y, tras entender la API, implementé los cambios y me aseguré de mantener la cobertura de pruebas.
@@ -116,22 +162,22 @@ además de cambiar el generado de .rss para que generase el feed de los podcast 
 y \href{https://git.fsfe.org/FSFE/fsfe-website/pulls/6189}{PR en el que se cambió el generador de .rss}.
 
     He realizado cambios en la lógica PHP de la web de la fundación, para alterar formularios, añadir filtros y expandir funcionalidades.
-    %todo evidencia?
+    \href{https://git.fsfe.org/FSFE/fsfe-website/pulls/6173}{PR en la que se actualizó el formulario de puesto de conferencia}.
+
 
     Durante las prácticas, tuvimos que enfrentar los CVE-2026-109618 y CVE-2026-109619, que afectaban a la infraestructura de la fundación.
     Esto requirió una rápida respuesta para bloquear los ataques y mitigar los riesgos.
     Al día siguiente, actualizamos todos los servicios.
-    %todo evidencia?
 
     He ido haciendo cambios a la página web y distintas traducciones de la fundación, para mejorar la experiencia de usuario y la accesibilidad.
-    %todo evidencia?
+    \href{https://git.fsfe.org/marcelo.fm?tab=activity}{Enlace a mi actividad en la web de la fundación}.
 
     Tras la configuración de un nuevo sistema de \textquote{webmail}, redacté la documentación para su uso y configuración, para que los voluntarios y empleados puedan utilizarlo sin problemas.
-    %todo evidencia?
+    La información se encuentra en documentación no pública de la fundación, por lo que no puedo enlazarla.
 
     Estoy desarrollando una herramienta de estadísticas estáticas de la página web de la fundación,
     esta herramienta permite ver los eventos y noticias agregados, por etiquetas, mes, año, ciudad y país, y permite filtrar por estos parámetros.
-    %todo evidencia?
+    \href{https://git.fsfe.org/marcelo.fm/get_stats}{Enlace a la herramienta de estadísticas}.
 
 \subsection{Herramientas utilizadas en las prácticas}\label{subsec:herramientas}
     Durante el desarrollo de las prácticas, he utilizado gran variedad de herramientas, tanto para el desarrollo, como para la getión y comunicación interna (tareas y coordinación) como externa.
@@ -149,13 +195,23 @@ y \href{https://git.fsfe.org/FSFE/fsfe-website/pulls/6189}{PR en el que se cambi
     En la fundación, usamos una forma modificada de SCRUM, en la que hay, por un lado, un tablero de tareas, en el que se pueden ver las tareas pendientes, en progreso y completadas, y, por otro lado,
     una reunión bisemanal para actualizar prioridades y una diaria para poner en común los avances y tareas del día.
     En mi departamento, tenemos varios tableros de tareas, uno para mis prácticas, uno de tareas \textquote{pequeñas},
-    otro de tareas de mantenimiento y uno multidepartamental, en el que se pueden ver las tareas de todos los departamentos distribuidas por semanas.
-    También tenemos una reunión todos los lunes para oordinar las tareas de mis prácticas.
+    otro de tareas de mantenimiento y uno interdepartmental, en el que se pueden ver las tareas de todos los departamentos distribuidas por semanas.
+    También tenemos una reunión todos los lunes para coordinar las tareas de mis prácticas.
 
     En el departamento estamos mi tutor y yo, y a mayores, también participan voluntarios de la comunidad, que mantienen y desarrollan herramientas y servicios de la fundación.
-
-    %todo: Puedes plasmar una evidencia de tu calendario laboral y comentar sobre él.
+    Se puede ver un ejemplo de la planificación de tareas en la \autoref{fig:calendario_semana_45}.
+    \begin{figure}[hb]
+        \centering
+        \includegraphics[keepaspectratio, width=0.8\textwidth]{/home/marcelo/Documentos/memoria_practicas_en_la_empresa/src/recursos/calendario_semana_45}
+        \caption[Calendario laboral]{Calendario de la semana laboral 45}
+        \label{fig:calendario_semana_45}
+    \end{figure}
 
 \subsection{Valoración personal de la elección de las prácticas}\label{subsec:valoracion-personal}
-    %todo
+    A título personal, considero que la elección de las prácticas ha sido muy acertada,
+    ya que he podido, por un lado aprender sobre el diseño de infraestructuras de servicios,
+    la gestión de servicios y la seguridad informática, y por otro lado,
+    he practicado y aprendido sobre el desarrollo de herramientas y servicios para la comunidad de software libre.
+    También he aumentado mi python, específicamente flask, que son tecnologías que no había usado mucho antes y,
+    que me han resultado muy interesantes.
 %FIN SECCIÓN
