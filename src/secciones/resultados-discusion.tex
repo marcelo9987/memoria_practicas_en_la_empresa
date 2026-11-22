@@ -56,12 +56,26 @@ Semántica no reflejada:
     
 \end{lstlisting}
 
-\begin{longtable}[c]{|c|c|c|c|c|c|c|c|}
+
+\begin{longtable}{|l|l|p{3.8cm}|p{2.2cm}|c|c|c|c|}
     \hline
     \multicolumn{8}{| c |}{Begin of Table} \\
     \hline
     Entidad o relación & Atributos & Descripción & Tipo de datos & N & M & D & P \\
     \hline
+    \multirow{6}{*}{Persona}
+    & Nombre & Nombre y apellidos de cada usuario & Carácter variable 100 & NO & NO & NO & NO \\
+    \cline{2-8}
+    & Id\_usuario \{PK\} & Identificador único de cada usuario & Carácter variable 30 & NO & NO & NO & NO \\
+    \cline{2-8}
+    & Correo & Dirección de email único de cada usuario & Carácter variable 100 & NO & NO & NO & NO \\
+    \cline{2-8}
+    & Contraseña & Contraseña de cada usuario para acceder a la aplicación & Carácter variable 20 & NO & NO & NO & NO \\
+    \cline{2-8}
+    & Rol & Rol de cada usuario (administrador, empleado, cliente) & Carácter variable 20 & NO & NO & NO & NO \\
+    \cline{2-8}
+    & tipo\_usuario & Tipo de usuario: administrador, usuario & Carácter variable 20 & NO & NO & NO & 'Normal' \\
+    \hline
+    \hline
     \caption{This is the caption for the test table.}
 \end{longtable}\label{tab:diccionario-datos}
-
